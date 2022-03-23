@@ -22,10 +22,10 @@ minuteHand.style.transform = `rotate(${minuteDegrees}deg)`
 hourHand.style.transform = `rotate(${hourDegrees}deg)`
 
 const zone = (hours > 11) ? "PM" : "AM"
-const hoursFull = (hours < 10) ? `0${hours}` : `${hours}`
-const minutesFull = (minutes < 10) ? `0${minutes}` : `${minutes}`
-const secondsFull = (seconds < 10) ? `0${seconds}` : `${seconds}`
-digitalTime.innerHTML = `${hoursFull} : ${minutesFull} : ${secondsFull} ${zone}`
+const hoursFull = timeCheck(hours)
+const minutesFull = timeCheck(minutes)
+const secondsFull = timeCheck(time)
+digitalTime.innerHTML = `${hoursFull} : ${minutesFull} : ${secondsFull} ${zone} `
 }
 
 function timeCheck(time){
