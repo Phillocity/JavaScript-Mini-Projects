@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS + CSS Clock</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <video style="position:absolute; object-fit: cover ;min-width:100vw; min-height: 100vh; max-height: 100vh;max-width:100vw;" type="video/mp4" autoplay loop>
+    <source src="synth.mp4"/>
+  </video>
+  <div class="wrapper d-flex flex-column align-items-center justify-content-center w-100">
+    <div class="digital d-flex justify-content-center col-12 align-items-center text-center">
+      <div class="time digital-time col-8">12:</div>
+
+
+    </div>
+    <div class="clock">
+      <div class="clock-face">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <style>
+    html {
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      flex: 1;
+      min-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border: 20px solid #74339d75;
+      background: rgba(255, 255, 255, 0.418);
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+        0 0 0 4px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px);
+      /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width: 50%;
+      height: 6px;
+      background: #FDFF75;
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1)
+    }
+
+    .second-hand {
+      background: #52198B;
+      height: 2px;
+      z-index: -1;
+    }
+
+    .hour-hand {
+      width: 40%;
+      left: 22px
+    }
+
+    .time {
+      font-size: 12rem;
+      color: white;
+      z-index: 1;
+      text-shadow: 6px 7px 4px rgb(0 0 0 / 73%);
+    }
+  </style>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

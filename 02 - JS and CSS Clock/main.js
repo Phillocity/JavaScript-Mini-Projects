@@ -1,6 +1,8 @@
 const secondHand = document.querySelector('.second-hand')
 const minuteHand = document.querySelector('.min-hand')
 const hourHand = document.querySelector('.hour-hand')
+const digitalTime = document.querySelector('.digital-time')
+
 
 
 function setTime(){
@@ -19,7 +21,18 @@ secondHand.style.transform = `rotate(${secondsDegrees}deg)`
 minuteHand.style.transform = `rotate(${minuteDegrees}deg)`
 hourHand.style.transform = `rotate(${hourDegrees}deg)`
 
-console.log(seconds)
+const zone = (hours > 11) ? "PM" : "AM"
+const hoursFull = (hours < 10) ? `0${hours}` : `${hours}`
+const minutesFull = (minutes < 10) ? `0${minutes}` : `${minutes}`
+const secondsFull = (seconds < 10) ? `0${seconds}` : `${seconds}`
+digitalTime.innerHTML = `${hoursFull} : ${minutesFull} : ${secondsFull} ${zone}`
+}
+
+function timeCheck(time){
+  if (time < 10){
+    time = `0${time}`
+  }
+  return time
 }
 
 setInterval(setTime, 1000);
