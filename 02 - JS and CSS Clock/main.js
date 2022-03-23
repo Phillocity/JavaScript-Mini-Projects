@@ -3,8 +3,6 @@ const minuteHand = document.querySelector('.min-hand')
 const hourHand = document.querySelector('.hour-hand')
 const digitalTime = document.querySelector('.digital-time')
 
-
-
 function setTime() {
   const now = new Date;
   const seconds = now.getSeconds()
@@ -35,6 +33,5 @@ function timeCheck(time) {
   }
   return time
 }
-
 
 setInterval(setTime, 1000);

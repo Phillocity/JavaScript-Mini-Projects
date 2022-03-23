@@ -9,9 +9,7 @@
 </head>
 
 <body>
-  <video
-    style="position:absolute; object-fit: cover ;min-width:100vw; min-height: 100vh; max-height: 100vh;max-width:100vw;"
-    type="video/mp4" autoplay loop>
+  <video style="position:absolute; object-fit: cover ;min-width:100vw; min-height: 100vh; max-height: 100vh;max-width:100vw;"type="video/mp4" autoplay loop muted>
     <source src="synth.mp4" />
   </video>
   <div class="wrapper d-flex flex-column align-items-center justify-content-center w-100">
@@ -46,8 +44,8 @@
     .clock {
       width: 30rem;
       height: 30rem;
-      border: 20px solid #74339d75;
-      background: rgba(255, 255, 255, 0.418);
+      border: 20px solid #AE0A63;
+      background: rgba(255, 255, 255, 0.445);
       border-radius: 50%;
       margin: 50px auto;
       position: relative;
@@ -64,13 +62,12 @@
       width: 100%;
       height: 100%;
       transform: translateY(-3px);
-      /* account for the height of the clock hands */
     }
 
     .hand {
       width: 50%;
       height: 6px;
-      background: #FDFF75;
+      background: #ffffff;
       position: absolute;
       top: 50%;
       transform-origin: 100%;
