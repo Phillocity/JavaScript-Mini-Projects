@@ -298,7 +298,7 @@ const searcher = document.querySelector("#searcher")
 searcher.addEventListener('keyup', () => searching(searcher.value))
 
 champtable.insertAdjacentHTML("beforeend", "<tr><th>League Champions</th></tr>")
-  champions.forEach((champ) => {
+  champions.slice(0,10).forEach((champ) => {
     champtable.insertAdjacentHTML("beforeend", `<tr><td>${champ}</td></tr>`)
   })
 
@@ -308,7 +308,7 @@ function searching(query) {
     champtable.removeChild(champtable.firstChild);
   }
   champtable.insertAdjacentHTML("beforeend", "<tr><th>League Champions</th></tr>")
-  filtered.forEach((champ) => {
+  filtered.slice(0,10).forEach((champ) => {
     champtable.insertAdjacentHTML("beforeend", `<tr><td>${champ}</td></tr>`)
   });
 }
