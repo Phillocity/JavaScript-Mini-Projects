@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS Arrays and AJAX Practice</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+  <style>
+    html{
+      font-family: monospace;
+      font-size: 1vw;
+    }
+    th,
+    td {
+      border-top: 2px solid rgba(0, 0, 0, 0.363);
+      padding:10px;
+      background: white;
+      transition: all 0.2s
+    }
+    th:hover,
+    td:hover {
+      background-color: rgb(250, 237, 178);
+
+    }
+
+    th {
+      background-color: rgb(253, 218, 63);
+    }
+
+    .bg {
+      animation: slide 3s ease-in-out infinite alternate;
+      background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+      bottom: 0;
+      left: -50%;
+      opacity: .5;
+      position: fixed;
+      right: -50%;
+      top: 0;
+      z-index: -1;
+    }
+
+    .bg2 {
+      animation-direction: alternate-reverse;
+      animation-duration: 4s;
+    }
+
+    .bg3 {
+      animation-duration: 5s;
+    }
+
+
+
+    @keyframes slide {
+      0% {
+        transform: translateX(-25%);
+      }
+
+      100% {
+        transform: translateX(25%);
+      }
+    }
+  </style>
+<div class="container d-flex flex-column justify-content-center align-items-center col-4">
+  <h1>Champion Search</h1>
+  <form class="w-100">
+    <input type="text" id="searcher" placeholder="Type some champion names" class="w-100">
+  </form>
+
+  <table class="mt-5 w-100">
+    <tbody class="champ-table">
+    </tbody>
+  </table>
+</div>
+  <script src="main.js"></script>
+</body>
+
+</html>
