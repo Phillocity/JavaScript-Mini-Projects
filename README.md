@@ -9,4 +9,6 @@ https://user-images.githubusercontent.com/12134641/159683561-58194343-b44e-4891-
 https://user-images.githubusercontent.com/12134641/159728446-807fb293-a2ba-4882-9a02-2729567c5472.mp4
 >## 4 - JS Array Practice & Pure JS AJAX Search
 https://user-images.githubusercontent.com/12134641/159990456-d81a323a-a3dc-48fb-babd-37e509818a6c.mp4
+>## 5 - JS Ghibli Flex Cards
+https://user-images.githubusercontent.com/12134641/160215571-c2fa424a-d4ae-4f4d-8b6d-ea6cd13c25b7.mp4
 
