@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <title>Type Ahead 👀</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-
-  <form class="search-form">
-    <input type="text" class="search" placeholder="City or State">
+  <video style="position:absolute; object-fit: cover ;min-width:100vw; min-height: 100vh; max-height: 100vh;max-width:100vw;"type="video/mp4" autoplay loop muted>
+    <source src="tech.mp4" />
+  </video>
+  <div class="wrapper d-flex align-items-center flex-column">
+  <form class="search-form mt-5">
+    <input type="text" class="search" placeholder="US City or State">
     <ul class="suggestions">
       <li>Filter for a city</li>
       <li>or a state</li>
     </ul>
   </form>
+</div>
 <script src="main.js"></script>
 </body>
 </html>
