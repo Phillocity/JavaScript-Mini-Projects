@@ -13,4 +13,5 @@ https://user-images.githubusercontent.com/12134641/159990456-d81a323a-a3dc-48fb-
 https://user-images.githubusercontent.com/12134641/160215571-c2fa424a-d4ae-4f4d-8b6d-ea6cd13c25b7.mp4
 >## 6 - JS Search with Ajax
 https://user-images.githubusercontent.com/12134641/160695304-cb5bba0f-d0d5-4c9e-9a3f-f3c4c1a21527.mp4
-
+>## 7 - JS Array Practice
+<No Showcase>
