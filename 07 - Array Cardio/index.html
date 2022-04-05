@@ -23,24 +23,40 @@
       { text: 'Ramen is my fav food ever', id: 123523 },
       { text: 'Nice Nice Nice!', id: 542328 }
     ];
+    console.log(Object.keys({people})[0]);
+    console.table(people);
 
-    // Some and Every Checks
+    console.log(Object.keys({comments})[0]);
+    console.table(comments);
+
     currentDate = new Date
-    // Array.prototype.some() // is at least one person 19 or older?
     const Over19 = (people) => {
+      // Array.prototype.some() // is at least one person 19 or older?
       return people.some( person => (currentDate.getFullYear() - person.year) > 19 )
     }
 
-    // Array.prototype.every() // is everyone 19 or older?
+    const Over19All = (people) => {
+      // Array.prototype.every() // is everyone 19 or older?
+      return people.every( person => (currentDate.getFullYear() - person.year) > 19 )
+    }
 
-    // Array.prototype.find()
-    // Find is like filter, but instead returns just the one you are looking for
-    // find the comment with the ID of 823423
+    const findComment = (comments, id) => {
+      // Array.prototype.find() finds the comment via the ID
+      return comments.find( comment => comment.id === id)
+    }
 
+    const findComments = (comments, text) => {
+      // Array.prototype.findIndex() finds the comment via the text
+      return comments.findIndex( comment => comment.text === text)
+    }
     // Array.prototype.findIndex()
-    // Find the comment with this ID
-    // delete the comment with the ID of 823423
+    const findAndDelete = (comments, id) => {
+      // Find the comment with the provided ID and delete it
+      const index = comments.findIndex( comment => comment.id === id)
+      const removed = comments.splice(index, 1)
+      return console.log(`${removed} was removed from the array`)
+    }
 
-  </script>
+</script>
 </body>
 </html>
