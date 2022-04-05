@@ -6,57 +6,6 @@
 </head>
 <body>
   <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
-  <script>
-    // ## Array Cardio Day 2
-
-    const people = [
-      { name: 'Wes', year: 1988 },
-      { name: 'Kait', year: 1986 },
-      { name: 'Irv', year: 1970 },
-      { name: 'Lux', year: 2015 }
-    ];
-
-    const comments = [
-      { text: 'Love this!', id: 523423 },
-      { text: 'Super good', id: 823423 },
-      { text: 'You are the best', id: 2039842 },
-      { text: 'Ramen is my fav food ever', id: 123523 },
-      { text: 'Nice Nice Nice!', id: 542328 }
-    ];
-    console.log(Object.keys({people})[0]);
-    console.table(people);
-
-    console.log(Object.keys({comments})[0]);
-    console.table(comments);
-
-    currentDate = new Date
-    const Over19 = (people) => {
-      // Array.prototype.some() // is at least one person 19 or older?
-      return people.some( person => (currentDate.getFullYear() - person.year) > 19 )
-    }
-
-    const Over19All = (people) => {
-      // Array.prototype.every() // is everyone 19 or older?
-      return people.every( person => (currentDate.getFullYear() - person.year) > 19 )
-    }
-
-    const findComment = (comments, id) => {
-      // Array.prototype.find() finds the comment via the ID
-      return comments.find( comment => comment.id === id)
-    }
-
-    const findComments = (comments, text) => {
-      // Array.prototype.findIndex() finds the comment via the text
-      return comments.findIndex( comment => comment.text === text)
-    }
-    // Array.prototype.findIndex()
-    const findAndDelete = (comments, id) => {
-      // Find the comment with the provided ID and delete it
-      const index = comments.findIndex( comment => comment.id === id)
-      const removed = comments.splice(index, 1)
-      return console.log(`${removed} was removed from the array`)
-    }
-
-</script>
+  <script src="main.js"></script>
 </body>
 </html>
