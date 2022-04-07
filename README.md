@@ -15,3 +15,6 @@ https://user-images.githubusercontent.com/12134641/160215571-c2fa424a-d4ae-4f4d-
 https://user-images.githubusercontent.com/12134641/160695304-cb5bba0f-d0d5-4c9e-9a3f-f3c4c1a21527.mp4
 >## 7 - JS Array Practice
 ---No Showcase---
+>## 8 - HTML5 Canvas
+https://user-images.githubusercontent.com/12134641/162279518-eeafdade-b17a-4221-bb8d-9024ce884b01.mp4
+
