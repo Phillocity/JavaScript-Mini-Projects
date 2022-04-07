@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+</head>
+
+<body>
+  <canvas id="draw" width="800" height="800"></canvas>
+  <script defer>
+    const canvas = document.querySelector('#draw');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+
+    let drawing = false;
+    let lastX = 0;
+    let lastY = 0;
+    let strokeHue = 0;
+
+
+    const draw = (e) => {
+      if (!drawing) return; //Prevents the function from running when mouse isn't down
+      ctx.beginPath();
+      ctx.moveTo(lastX, lastY);
+      ctx.lineTo(e.offsetX, e.offsetY);
+      ctx.stroke();
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+      ctx.strokeStyle = `hsl(${strokeHue}, 100%, 50%)`;
+      strokeHue += 0.2;
+      // console.log(strokeHue);
+    }
+
+    canvas.addEventListener('mousemove', draw)
+    canvas.addEventListener('mousedown', (e) => {
+      drawing = true;
+      [lastX, lastY] = [e.offsetX, e.offsetY];
+    })
+    canvas.addEventListener('mouseup', () => drawing = false)
+    canvas.addEventListener('mouseout', () => drawing = false)
+
+    //Clears canvas
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    })
+
+  </script>
+  <style>
+    html,
+    body {
+      margin: 0;
+    }
+  </style>
+
+</body>
+
+</html>
